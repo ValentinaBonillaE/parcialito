@@ -1,0 +1,28 @@
+<body> 
+    <div class="container" id="container">
+        <div class="form-container sign-in-container">
+            <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+                <h1>LOGIN</h1>
+
+                <input type="text" placeholder="email" formControlName="username"/>
+                <mat-error *ngIf="loginForm.controls['username'].hasError('required')">
+            </mat-error>
+
+            <input type="password" placeholder="password" formControlName="password"/>
+                <mat-error *ngIf="loginForm.controls['password'].hasError('required')">
+                </mat-error>
+
+            <a href="#">¿Olvisdaste tu contraseña?</a>
+            <button type="submit" mat-input>Ingresar</button>
+            </form>
+        </div>
+        <div class="overlay-container">
+            <div class="overlay">
+                <div class="overlay-panel overlay-left">
+                    <img src="" alt="">
+                    <figcaption>Drogueria</figcaption>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
